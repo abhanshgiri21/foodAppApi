@@ -48,8 +48,9 @@ module.exports.datastores = {
     *    (See https://sailsjs.com/config/datastores for help.)                 *
     *                                                                          *
     ***************************************************************************/
-    // adapter: 'sails-mysql',
-    // url: 'mysql://user:password@host:port/database',
+    adapter: require('sails-mysql'),
+    url: 'mysql://root@db:3306/food_app_tt', // docker url
+    // url: 'mysql://root@localhost:3306/food_app' // local dev url
 
   },
 

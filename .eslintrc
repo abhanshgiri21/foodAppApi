@@ -30,6 +30,10 @@
     "ecmaVersion": 2018
   },
 
+  "plugins": [
+    "mocha"
+  ],
+
   "globals": {
     // If "no-undef" is enabled below, be sure to list all global variables that
     // are used in this app's backend code (including the globalIds of models):
@@ -39,7 +43,14 @@
     "_": true,
 
     // Models:
-    "User": true
+    "User": true,
+    "Order": true,
+    "Restaurant": true,
+    "OpeningHours": true,
+    "Menu": true,
+
+
+    "UserService": "readonly"
     
     // …and any others.
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -79,7 +90,6 @@
     "no-unreachable":               ["warn"],
     "no-unused-vars":               ["warn", {"caughtErrors":"all", "caughtErrorsIgnorePattern": "^unused($|[A-Z].*$)", "argsIgnorePattern": "^unused($|[A-Z].*$)", "varsIgnorePattern": "^unused($|[A-Z].*$)" }],
     "no-use-before-define":         ["error", {"functions":false}],
-    "one-var":                      ["warn", "never"],
     "prefer-arrow-callback":        ["warn", {"allowNamedFunctions":true}],
     "quotes":                       ["warn", "single", {"avoidEscape":false, "allowTemplateLiterals":true}],
     "semi":                         ["warn", "always"],

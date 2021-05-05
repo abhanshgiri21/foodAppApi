@@ -1,0 +1,11 @@
+{
+  "globals": {
+    // Mocha Globals
+    "it": "readonly",
+    "describe": "readonly",
+    "before": "readonly",
+    "beforeEach": "readonly",
+    "after": "readonly",
+    "afterEach": "readonly"
+  }
+}

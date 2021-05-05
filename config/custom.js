@@ -33,9 +33,9 @@ module.exports.custom = {
   * > app when it's first generated.                                        *
   *                                                                         *
   **************************************************************************/
-  platformCopyrightYear: '2019',
-  platformName:  'NEW_APP_NAME',
-  platformCompanyName: 'NEW_APP_COMPANY_NAME',
+  platformCopyrightYear: '2021',
+  platformName:  'Food Api',
+  platformCompanyName: 'Food Api App',
   platformCompanyAboutHref: 'https://sailsjs.com/about',
   privacyPolicyUpdatedAt: 'DATE_PRIVACY_POLICY_LAST_UPDATED',
   termsOfServiceUpdatedAt: 'DATE_TERMS_OF_SERVICE_LAST_UPDATED',

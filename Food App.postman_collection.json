@@ -1,0 +1,615 @@
+{
+	"info": {
+		"_postman_id": "b29f6970-0d7c-4da8-8705-aad05d18200b",
+		"name": "Food App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get User by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/user/:user_id",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						":user_id"
+					],
+					"variable": [
+						{
+							"key": "user_id",
+							"value": "500"
+						}
+					]
+				},
+				"description": "Get a user's details along with their orders for a given id."
+			},
+			"response": [
+				{
+					"name": "Get User by Id (Success)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/user/:user_id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								":user_id"
+							],
+							"variable": [
+								{
+									"key": "user_id",
+									"value": "500"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Sails <sailsjs.com>"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "651"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"28b-wSjoqaX4hj8BRYq5m2dYyjFkUEU\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 05 May 2021 16:32:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"orders\": [\n            {\n                \"createdAt\": \"2021-04-25T21:22:58.000Z\",\n                \"id\": 4662,\n                \"amount\": 11.97,\n                \"user\": 500,\n                \"restaurant\": 1016,\n                \"dish\": 8593\n            },\n            {\n                \"createdAt\": \"2021-04-25T21:22:58.000Z\",\n                \"id\": 4663,\n                \"amount\": 10.17,\n                \"user\": 500,\n                \"restaurant\": 1228,\n                \"dish\": 10415\n            },\n            {\n                \"createdAt\": \"2021-04-25T21:22:58.000Z\",\n                \"id\": 4664,\n                \"amount\": 10.23,\n                \"user\": 500,\n                \"restaurant\": 1500,\n                \"dish\": 12765\n            }\n        ],\n        \"id\": 500,\n        \"name\": \"Angela Lackey\",\n        \"balance\": 327.9\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Restaurant by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/restaurant/:restaurant_id",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"restaurant",
+						":restaurant_id"
+					],
+					"variable": [
+						{
+							"key": "restaurant_id",
+							"value": "1000"
+						}
+					]
+				},
+				"description": "Get details of a restaurant along with it's orders and menu items."
+			},
+			"response": [
+				{
+					"name": "Get Restaurant by Id (Success)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/restaurant/:restaurant_id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"restaurant",
+								":restaurant_id"
+							],
+							"variable": [
+								{
+									"key": "restaurant_id",
+									"value": "1000"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Sails <sailsjs.com>"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1776"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6f0-wVrNrs9maRJl9wFd9rqo4/TIm3U\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 05 May 2021 16:32:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"restaurant\": {\n        \"orders\": [\n            {\n                \"createdAt\": \"2021-04-25T21:22:58.000Z\",\n                \"id\": 7806,\n                \"amount\": 10.28,\n                \"user\": 835,\n                \"restaurant\": 1000,\n                \"dish\": 8477\n            }\n        ],\n        \"menuItems\": [\n            {\n                \"id\": 8474,\n                \"name\": \"Tenny's Dutch cocoa\",\n                \"price\": 10.1,\n                \"restaurant\": 1000\n            },\n            {\n                \"id\": 8475,\n                \"name\": \"[Oak Island Oyster] Fry\",\n                \"price\": 10.3,\n                \"restaurant\": 1000\n            },\n            {\n                \"id\": 8476,\n                \"name\": \"Guinness's Stout\",\n                \"price\": 10.25,\n                \"restaurant\": 1000\n            },\n            {\n                \"id\": 8477,\n                \"name\": \"Senatorenteller:\",\n                \"price\": 10.28,\n                \"restaurant\": 1000\n            },\n            {\n                \"id\": 8478,\n                \"name\": \"Marinated Herring in Rich Sour Cream\",\n                \"price\": 10.95,\n                \"restaurant\": 1000\n            },\n            {\n                \"id\": 8479,\n                \"name\": \"Whole cold lobster\",\n                \"price\": 11.25,\n                \"restaurant\": 1000\n            },\n            {\n                \"id\": 8480,\n                \"name\": \"String Beans Polonaise\",\n                \"price\": 10.15,\n                \"restaurant\": 1000\n            },\n            {\n                \"id\": 8481,\n                \"name\": \"Two Eggs with Sausage\",\n                \"price\": 12.25,\n                \"restaurant\": 1000\n            },\n            {\n                \"id\": 8482,\n                \"name\": \"ROAST LOIN OF VEAL - sauteed garlic\",\n                \"price\": 12.39,\n                \"restaurant\": 1000\n            },\n            {\n                \"id\": 8483,\n                \"name\": \"Boneless Pork Knuckles\",\n                \"price\": 11.46,\n                \"restaurant\": 1000\n            },\n            {\n                \"id\": 8484,\n                \"name\": \"Saddle Rock fry or broil\",\n                \"price\": 10.4,\n                \"restaurant\": 1000\n            }\n        ],\n        \"id\": 1000,\n        \"name\": \"Landry's Seafood House - Denver\",\n        \"balance\": 1304.04\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Check Open Restaurants",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/restaurant/open?datetime=25/04/21 20:43&offset=5&limit=10",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"restaurant",
+						"open"
+					],
+					"query": [
+						{
+							"key": "datetime",
+							"value": "25/04/21 20:43"
+						},
+						{
+							"key": "offset",
+							"value": "5"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				},
+				"description": "Get a list of open restaurants at the given time and date. The date and time for check which restaurants are open are supplied in the format `DD/MM/YY HH:mm` where the time is in 24hour format."
+			},
+			"response": [
+				{
+					"name": "Check Open Restaurants (Success)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/restaurant/open?datetime=25/04/21 20:43&offset=5&limit=10",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"restaurant",
+								"open"
+							],
+							"query": [
+								{
+									"key": "datetime",
+									"value": "25/04/21 20:43"
+								},
+								{
+									"key": "offset",
+									"value": "5"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Sails <sailsjs.com>"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "895"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"37f-XV3y/eEfbGiXnlHatPcv+3hZYKg\""
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "sails.sid=s%3Amo9_19EbyQSHqqiJ0WMU4dkWMlIbN5lC.IQj8blHkjP1EEOw0TlGdhkAJeEk%2BJGuTgvIDbm1V%2B7w; Path=/; HttpOnly"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 05 May 2021 16:33:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"restaurants\": [\n        {\n            \"id\": 19,\n            \"name\": \"2G Japanese Brasserie\",\n            \"balance\": 1507.56\n        },\n        {\n            \"id\": 20,\n            \"name\": \"3 Point\",\n            \"balance\": 3798.63\n        },\n        {\n            \"id\": 23,\n            \"name\": \"36th Street Bistro\",\n            \"balance\": 2856.2\n        },\n        {\n            \"id\": 26,\n            \"name\": \"5 Palms Restaurant\",\n            \"balance\": 942.02\n        },\n        {\n            \"id\": 27,\n            \"name\": \"5 Spot\",\n            \"balance\": 304.11\n        },\n        {\n            \"id\": 29,\n            \"name\": \"53 by the Sea\",\n            \"balance\": 3724.61\n        },\n        {\n            \"id\": 31,\n            \"name\": \"715\",\n            \"balance\": 2303.13\n        },\n        {\n            \"id\": 33,\n            \"name\": \"801 Chophouse Leawood\",\n            \"balance\": 3474.09\n        },\n        {\n            \"id\": 34,\n            \"name\": \"801 Chophouse – Des Moines\",\n            \"balance\": 2094.94\n        },\n        {\n            \"id\": 35,\n            \"name\": \"801 Fish - Leawood\",\n            \"balance\": 4873.88\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Restaurants with dish price filter",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/restaurant/dish-price?minPrice=1&maxPrice=20&dishCount=1&limit=10&offset=600",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"restaurant",
+						"dish-price"
+					],
+					"query": [
+						{
+							"key": "minPrice",
+							"value": "1",
+							"description": "min price of the dishes a restaurant needs to have of dishCount"
+						},
+						{
+							"key": "maxPrice",
+							"value": "20",
+							"description": "max price of the dishes a restaurant needs to have of dishCount"
+						},
+						{
+							"key": "dishCount",
+							"value": "1",
+							"description": "Count of dishes costing more than minPrice or less than maxPrice or both"
+						},
+						{
+							"key": "limit",
+							"value": "10",
+							"description": "The number of restaurants to return in response"
+						},
+						{
+							"key": "offset",
+							"value": "600",
+							"description": "Number of restaurants to skip from the full list"
+						}
+					]
+				},
+				"description": "Get a list of restaurants having a given number of dishes costing either more than the minPrice or less than the maxPrice or both."
+			},
+			"response": [
+				{
+					"name": "Get Restaurants with dish price filter (Success)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/restaurant/dish-price?minPrice=1&maxPrice=20&dishCount=1&limit=10&offset=600",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"restaurant",
+								"dish-price"
+							],
+							"query": [
+								{
+									"key": "minPrice",
+									"value": "1",
+									"description": "min price of the dishes a restaurant needs to have of dishCount"
+								},
+								{
+									"key": "maxPrice",
+									"value": "20",
+									"description": "max price of the dishes a restaurant needs to have of dishCount"
+								},
+								{
+									"key": "dishCount",
+									"value": "1",
+									"description": "Count of dishes costing more than minPrice or less than maxPrice or both"
+								},
+								{
+									"key": "limit",
+									"value": "10",
+									"description": "The number of restaurants to return in response"
+								},
+								{
+									"key": "offset",
+									"value": "600",
+									"description": "Number of restaurants to skip from the full list"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Sails <sailsjs.com>"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1171"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"493-9reGn3qhwccOHRrMPhPJP0vTmVQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 05 May 2021 16:34:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"restaurants\": [\n        {\n            \"id\": 936,\n            \"name\": \"Koa's Seaside Grill\",\n            \"balance\": 3291.64,\n            \"dishCount\": 11\n        },\n        {\n            \"id\": 1310,\n            \"name\": \"Oasis\",\n            \"balance\": 1104.27,\n            \"dishCount\": 11\n        },\n        {\n            \"id\": 952,\n            \"name\": \"Kula Lodge & Restaurant Inc.\",\n            \"balance\": 1485.72,\n            \"dishCount\": 11\n        },\n        {\n            \"id\": 300,\n            \"name\": \"Cadot Restaurant\",\n            \"balance\": 2586.37,\n            \"dishCount\": 11\n        },\n        {\n            \"id\": 246,\n            \"name\": \"Bombay Indian Restaurant\",\n            \"balance\": 169.74,\n            \"dishCount\": 11\n        },\n        {\n            \"id\": 658,\n            \"name\": \"Gaido's Seafood Restaurant\",\n            \"balance\": 4154.83,\n            \"dishCount\": 11\n        },\n        {\n            \"id\": 1000,\n            \"name\": \"Landry's Seafood House - Denver\",\n            \"balance\": 1304.04,\n            \"dishCount\": 11\n        },\n        {\n            \"id\": 1962,\n            \"name\": \"The Populist\",\n            \"balance\": 263.48,\n            \"dishCount\": 11\n        },\n        {\n            \"id\": 137,\n            \"name\": \"BaRed\",\n            \"balance\": 4006.49,\n            \"dishCount\": 11\n        },\n        {\n            \"id\": 1543,\n            \"name\": \"Rio Grande - Denver\",\n            \"balance\": 845.48,\n            \"dishCount\": 11\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Search Restaurants by relevance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/restaurant/search?searchTerm=Light&limit=10&offset=0",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"restaurant",
+						"search"
+					],
+					"query": [
+						{
+							"key": "searchTerm",
+							"value": "Light"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						}
+					]
+				},
+				"description": "Search restaurants by their name and dishNames. Preference is given to matching of restaurant names than dishNames."
+			},
+			"response": [
+				{
+					"name": "Search Restaurants by relevance(Success)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/restaurant/search?searchTerm=Light&limit=10&offset=1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"restaurant",
+								"search"
+							],
+							"query": [
+								{
+									"key": "searchTerm",
+									"value": "Light"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "offset",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Sails <sailsjs.com>"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1325"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"52d-LurGx5RRb3yxlohByQ3o9LwdrNY\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 05 May 2021 16:34:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"restaurants\": [\n        {\n            \"id\": 839,\n            \"name\": \"Island Prime\",\n            \"balance\": 914.44,\n            \"relevance\": 9.58395767211914\n        },\n        {\n            \"id\": 682,\n            \"name\": \"Geske's Fire Grill\",\n            \"balance\": 129.65,\n            \"relevance\": 9.58395767211914\n        },\n        {\n            \"id\": 1206,\n            \"name\": \"Mister A’s\",\n            \"balance\": 4284.33,\n            \"relevance\": 9.58395767211914\n        },\n        {\n            \"id\": 1,\n            \"name\": \"'Ulu Ocean Grill and Sushi Lounge\",\n            \"balance\": 4511.6,\n            \"relevance\": 9.58395767211914\n        },\n        {\n            \"id\": 1417,\n            \"name\": \"Picasso - Bellagio\",\n            \"balance\": 2301.44,\n            \"relevance\": 9.58395767211914\n        },\n        {\n            \"id\": 209,\n            \"name\": \"Bistro 234\",\n            \"balance\": 4639.95,\n            \"relevance\": 9.58395767211914\n        },\n        {\n            \"id\": 880,\n            \"name\": \"Josselin's Tapas Bar and Grill\",\n            \"balance\": 3541.22,\n            \"relevance\": 9.58395767211914\n        },\n        {\n            \"id\": 1570,\n            \"name\": \"Roy's Ko'Olina\",\n            \"balance\": 2463.07,\n            \"relevance\": 9.58395767211914\n        },\n        {\n            \"id\": 652,\n            \"name\": \"Fujiyama Steak House of Japan\",\n            \"balance\": 1638.13,\n            \"relevance\": 9.58395767211914\n        },\n        {\n            \"id\": 607,\n            \"name\": \"Firenze Italian Steakhouse\",\n            \"balance\": 2033.19,\n            \"relevance\": 9.58395767211914\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Purchase item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"dishId\": {{dishId}},\n    \"quantity\": {{quantity}},\n    \"userId\": {{userId}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/user/purchase",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user",
+						"purchase"
+					]
+				},
+				"description": "Make a purchase for a dish by a user"
+			},
+			"response": [
+				{
+					"name": "Purchase item (Success)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"dishId\": {{dishId}},\n    \"quantity\": {{quantity}},\n    \"userId\": {{userId}}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/user/purchase",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"purchase"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Sails <sailsjs.com>"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "63"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3f-WKLHecVlkiNETUmEkjglowhXk4o\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 05 May 2021 16:35:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"results\": true,\n    \"message\": \"Dish ordered successfully\"\n}"
+				}
+			]
+		}
+	]
+}

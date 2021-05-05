@@ -1,28 +1,41 @@
-# foodapp
+# Restaurant API
 
-a [Sails v1](https://sailsjs.com) application
+This api has been developed on top of 
+#### Pre-requisites for running this api [Sails v1](https://sailsjs.com) framework using [MySQL](https://www.mysql.com/) as a database.
 
++ [Working copy docker on your system](https://docs.docker.com/engine/install/)
++ A little bit of patience :grimacing:
 
-### Links
+# Steps to run this repo
++ Ensure no other application is running on port `1337`. This following commands can be used to list and kill processes running on port 1337
+```bash
+kill -9 $(lsof -t -i:8080)
+```
++ Clone this repo
++ Open your favourite terminal and navigate to the folder where above repo is cloned. Make sure you're at the root of the above project.
++ Run the following commands to build the docker images for the DB and Web Server. And then finally, start the server to accept traffic
 
-+ [Sails framework documentation](https://sailsjs.com/get-started)
-+ [Version notes / upgrading](https://sailsjs.com/documentation/upgrading)
-+ [Deployment tips](https://sailsjs.com/documentation/concepts/deployment)
-+ [Community support options](https://sailsjs.com/support)
-+ [Professional / enterprise options](https://sailsjs.com/enterprise)
+```bash
+docker-compose build --no-cache
+docker-compose up
+```
+---
 
+For api documentation for the API's this project exposes, you can [visit here](https://documenter.getpostman.com/view/15550740/TzRPi95Z).
 
-### Version info
+To try this out on your machine, the collection can be imported in [Postman](https://postman.com) from the file `Food App.postman_collection.json`
 
-This app was originally generated on Sat Apr 24 2021 17:01:05 GMT+0530 (India Standard Time) using Sails v1.2.4.
+---
 
-<!-- Internally, Sails used [`sails-generate@1.17.2`](https://github.com/balderdashy/sails-generate/tree/v1.17.2/lib/core-generators/new). -->
+### Testing and generating test report
 
++ Unit tests can be run by executing the following command.
+```bash
+npm run unit
+```
+The coverage report will be printed out in the terminal. This coverage is also appended to *.coverage* folder. This can be viewed as a HTML file in browser for detailed line by line coverage by opening **.coverage/lcov-report/index.html** in a browser.
 
-This project's boilerplate is based on an expanded seed app provided by the [Sails core team](https://sailsjs.com/about) to make it easier for you to build on top of ready-made features like authentication, enrollment, email verification, and billing.  For more information, [drop us a line](https://sailsjs.com/support).
+### Helpful Links
 
-
-<!--
-Note:  Generators are usually run using the globally-installed `sails` CLI (command-line interface).  This CLI version is _environment-specific_ rather than app-specific, thus over time, as a project's dependencies are upgraded or the project is worked on by different developers on different computers using different versions of Node.js, the Sails dependency in its package.json file may differ from the globally-installed Sails CLI release it was originally generated with.  (Be sure to always check out the relevant [upgrading guides](https://sailsjs.com/upgrading) before upgrading the version of Sails used by your app.  If you're stuck, [get help here](https://sailsjs.com/support).)
--->
-
++ [Sails framework documentation](https://sailsjs.com/documentation)
++ [MySQL documentation](https://dev.mysql.com/doc/)

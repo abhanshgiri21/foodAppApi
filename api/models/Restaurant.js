@@ -1,12 +1,5 @@
-/**
- * User.js
- *
- * A user who can log in to this application.
- */
-
 module.exports = {
-
-  tableName: 'users',
+  tableName: 'restaurants',
   attributes: {
     name: {
       type: 'string',
@@ -16,9 +9,17 @@ module.exports = {
       type: 'number',
       required: true
     },
+    menuItems: {
+      collection: 'menu',
+      via: 'restaurant'
+    },
+    openingHours: {
+      collection: 'openingHours',
+      via: 'restaurant'
+    },
     orders: {
       collection: 'order',
-      via: 'user'
+      via: 'restaurant'
     }
   },
 

@@ -1,24 +1,20 @@
-/**
- * User.js
- *
- * A user who can log in to this application.
- */
-
 module.exports = {
-
-  tableName: 'users',
+  tableName: 'opening_hours',
   attributes: {
-    name: {
-      type: 'string',
-      required: true
-    },
-    balance: {
+    start: {
       type: 'number',
       required: true
     },
-    orders: {
-      collection: 'order',
-      via: 'user'
+    end: {
+      type: 'number',
+      required: true
+    },
+    day: {
+      type: 'number',
+      required: true
+    },
+    restaurant: {
+      model: 'restaurant'
     }
   },
 
